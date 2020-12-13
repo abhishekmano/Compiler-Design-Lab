@@ -1,0 +1,8 @@
+https://cs6612compilerlab.blogspot.com/2018/04/program-to-recognize-valid-variable.html
+
+https://cs6612compilerlab.blogspot.com/2018/04/implementation-of-calculator-using-lex.html
+
+https://cs6612compilerlab.blogspot.com/2018/04/program-to-recognize-valid-arithmetic.html
+
+https://cs6612compilerlab.blogspot.com/2018/04/bnf-rules-into-yacc-form-and-write-code.html
+
