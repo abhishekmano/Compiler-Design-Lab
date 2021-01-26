@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-vector<vector<string>> get_production(unordered_map<char, int> &non_term, int *num)
+vector<vector<string>> get_production(unordered_map<char, int> &non_term, int *num) //return the production vector
 {
     int non = -1;
     string s;
@@ -10,7 +10,7 @@ vector<vector<string>> get_production(unordered_map<char, int> &non_term, int *n
     {
         int non_index;
         char left = s[0];
-        if (non_term.find(s[0]) == non_term.end())
+        if (non_term.find(s[0]) == non_term.end()) //add if it is a new non terminal
         {
             non_term[s[0]] = ++non;
             non_index = non;
@@ -19,7 +19,7 @@ vector<vector<string>> get_production(unordered_map<char, int> &non_term, int *n
         {
             non_index = non_term[s[0]];
         }
-        string right = s.substr(4, s.size() - 4);
+        string right = s.substr(4, s.size() - 4); // "s : " total 4 spaces are blank
         production[non].push_back(right);
         //cout << "right side " << right << endl;
         getline(cin, s);

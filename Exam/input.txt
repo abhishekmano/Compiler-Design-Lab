@@ -1,0 +1,22 @@
+E : E+T
+E : T
+T : T*F
+T : F
+F : (E)
+F : i
+
+E T F
++ * i ( ) #
+
+S : (L) 
+S : a
+L : SB
+B : ,SB 
+B : #
+
+S L B
+( ) a , #
+
+S : aBa
+B : #
+B : bB

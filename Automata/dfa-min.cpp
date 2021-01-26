@@ -38,7 +38,7 @@ int main()
 {
     int n, m;
     vector<vector<int>> dfa = input_dfa(&n, &m);
-    vector<vector<int>> matrix(n, vector<int>(m, 0));
+    vector<vector<int>> matrix(n, vector<int>(n, 0));
     int s, last, temp;
     cout << "Enter the start state: ";
     cin >> s;
@@ -74,9 +74,9 @@ int main()
         {
             for (int j = 0; j < n; ++j)
             {
-                for (int k = 0; k < m; ++k)
+                for (int k = 0; k < m; ++k) //for each production
                 {
-                    if (matrix[i][j] != 1)
+                    if (matrix[i][j] != 1) //skip if already marked
                         if (matrix[dfa[i][k]][dfa[j][k]] == 1)
                         {
                             matrix[i][j] = 1;

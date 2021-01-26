@@ -28,7 +28,7 @@ int main()
     cout << "Epsilon Closures are: \n";
     for (int i = 0; i < n; ++i)
     {
-        vector<int> visited(n, 0);
+        vector<int> visited(n, 0); //keep track of states visited
         if (visited[i] != 1)
         {
             cout << i << ": ";

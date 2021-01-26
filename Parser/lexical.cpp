@@ -1,7 +1,7 @@
 // Cpp program for a lexical analyzer
 #include <bits/stdc++.h>
 using namespace std;
-vector<string> split_vect(vector<string> s)
+vector<string> split_vect(vector<string> s) //function to seperate each token and remove extra spaces
 {
     vector<string> words;
     for (auto x : s)
@@ -44,7 +44,7 @@ vector<string> split_vect(vector<string> s)
     return words;
 }
 
-bool is_key(string s)
+bool is_key(string s) //function to check whether passed string is keyword
 {
     if (s == "if" || s == "else" || s == "int" || s == "for" || s == "bool" || s == "string" || s == "float" || s == "return" || s == "printf")
         return true;
@@ -114,7 +114,7 @@ bool is_relop(string s)
     return false;
 }
 
-bool is_num(string s)
+bool is_num(string s) //function to check whether the token is literal
 {
     int n = s.size();
     if (n == 0)

@@ -87,10 +87,9 @@ int main()
         cin >> temp;
         f.insert(temp);
     }
-    vector<vector<set<int>>> dfa;
-    set<set<int>>
-        present;
-    map<set<int>, int> state_num;
+    vector<vector<set<int>>> dfa; //states and transitions
+    set<set<int>> present;        // keep track of states
+    map<set<int>, int> state_num; //map state to a number
     queue<set<int>> elem;
 
     int dfa_state = 0;
@@ -106,18 +105,18 @@ int main()
         dfa_state++;
         dfa_row.push_back(current);
         elem.pop();
-        for (int i = 0; i < m; ++i)
+        for (int i = 0; i < m; ++i) //for each transition from this set of states
         {
             set<int> new_state;
             for (auto x : current)
             {
-                for (auto y : table[x][i])
+                for (auto y : table[x][i]) //for state x in current state set where i transition go
                 {
                     new_state.insert(y);
                 }
             }
             dfa_row.push_back(new_state);
-            if (present.find(new_state) == present.end())
+            if (present.find(new_state) == present.end()) //check whther this newly created state already exist
             {
                 present.insert(new_state);
                 elem.push(new_state);

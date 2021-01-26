@@ -51,7 +51,7 @@ int method(vector<vector<string>> production, unordered_map<char, int> non_term,
     int size = crnt_prod.size();
     for (int i = 0; i < size; ++i)
     {
-        if (non_term.find(crnt_prod[i]) == non_term.end())
+        if (non_term.find(crnt_prod[i]) == non_term.end()) //if it is a terminal do the matching
         {
             if (crnt_prod[i] != input[count + success])
             {

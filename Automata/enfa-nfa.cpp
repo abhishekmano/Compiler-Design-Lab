@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void print_vect(vector<vector<int>> arr, int a, int b)
+void print_vect(vector<vector<int>> arr, int a, int b) //Function to print 2D vector
 {
     for (int i = 0; i < a; ++i)
     {
@@ -24,7 +24,7 @@ void print_header(int m)
     cout << endl;
 }
 
-unordered_set<int> split_Add(string s)
+unordered_set<int> split_Add(string s) //split comma seperated states into unordered set
 {
     int size = s.size();
     unordered_set<int> res;
@@ -61,7 +61,7 @@ int main()
             string s;
             cin >> s;
             unordered_set<int> to_states;
-            if (s != "-")
+            if (s != "-") //no transition with that alphabet
                 to_states = split_Add(s);
             table[i][j] = to_states;
         }
@@ -200,7 +200,7 @@ int main()
     {
         for (auto x : closures[i])
         {
-            if (s.find(x) != f.end())
+            if (s.find(x) != s.end())
             {
                 cout << i << " ";
                 break;
